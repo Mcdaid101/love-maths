@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("You clicked Submit!");
-            } else {
+            if (this.getAttribute("data-type") === "submit") {               // basically saying if you click submit it will alert to say you clicked submit 
+                alert("You clicked Submit!");                                // and if you click anything else it will alert you to its game type
+            } else {                                                           
                 let gameType = this.getAttribute("data-type");
                 alert(`You clicked ${gameType}`);
             }
