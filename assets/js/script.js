@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    document.getElementById("answer-box").addEventListener("keydown", function(event){
+        if(event.key === "Enter"){                                                       // this event listener means that if the enter key is pressed then the check 
+            checkAnswer();                                                               // answer method will be called while in the answer box 
+        }
+    })
+   
     runGame("addition");
 
 });
@@ -25,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function runGame(gameType) {
 
+    document.getElementById("answer-box").value = "";                               //this sets the answer box to nothing and will empty it at the start of every new question
+    document.getElementById("answer-box").focus();                                  // this sets the cursor in the answer box ready to go 
     // Creates two random numbers between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;                                 //these are randomly generated numbers 
     let num2 = Math.floor(Math.random() * 25) + 1;
